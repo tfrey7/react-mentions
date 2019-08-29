@@ -331,6 +331,13 @@ module.exports = {
       selectionStartBeforeChange = selectionStartBeforeChange - 1
     }
 
+    // Some browser + locale + operating system combinations provide a wrong value for selectionEnd.  This
+    // prevents the user from typing in some characters (e.g. Korean) or will duplicate any existing text
+    // already in the text area.
+    if (selectionEndAfterChange === selectionEndBeforeChange) {
+      selectionEndAfterChange += 1;
+    }
+
     // extract the insertion from the new plain text value
     var insert = plainTextValue.slice(
       selectionStartBeforeChange,

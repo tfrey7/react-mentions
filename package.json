@@ -1,6 +1,6 @@
 {
   "name": "react-mentions",
-  "version": "0.0.0-development",
+  "version": "2.0.1-greenhouse",
   "description": "React mentions input",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/signavio/react-mentions.git"
+    "url": "git+https://github.com/tfrey7/react-mentions.git"
   },
   "keywords": [
     "react",
